@@ -20,11 +20,11 @@ buildscript {
         protobufGradlePluginVersion = '0.9.3'
 
         // https://github.com/spring-projects/spring-boot/releases
-        springBootVersion = '2.7.11'
+        springBootVersion = '3.0.6'
         // https://github.com/spring-cloud/spring-cloud-release/releases
-        springCloudVersion = '2021.0.5'
+        springCloudVersion = '2022.0.2'
         // https://github.com/alibaba/spring-cloud-alibaba/releases
-        springCloudAlibabaNacosVersion = '2021.1'
+        springCloudAlibabaNacosVersion = '2022.0.0.0-RC2'
 
         lombokPluginVersion = '8.0.1'
         versioningPluginVersion = '2.15.1'
@@ -82,13 +82,13 @@ allprojects {
 
     java {
         toolchain {
-            languageVersion = JavaLanguageVersion.of(8)
+            languageVersion = JavaLanguageVersion.of(17)
         }
     }
 
     compileJava {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
         options.encoding = 'UTF-8'
     }
 

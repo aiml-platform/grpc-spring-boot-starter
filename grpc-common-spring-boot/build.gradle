@@ -17,6 +17,6 @@ dependencies {
     api('io.grpc:grpc-core')
     optionalSupportImplementation('com.google.guava:guava')
 
-    optionalSupportImplementation('org.springframework.cloud:spring-cloud-starter-sleuth')
+    optionalSupportImplementation('org.springframework.cloud:spring-cloud-starter-sleuth:3.1.6')
     optionalSupportImplementation('io.zipkin.brave:brave-instrumentation-grpc')
 }

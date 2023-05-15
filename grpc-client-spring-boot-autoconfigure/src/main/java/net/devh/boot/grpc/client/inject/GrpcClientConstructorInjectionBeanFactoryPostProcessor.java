@@ -23,8 +23,6 @@ import java.lang.reflect.Executable;
 import java.lang.reflect.Parameter;
 import java.util.Arrays;
 
-import javax.validation.constraints.NotNull;
-
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -38,7 +36,7 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 public class GrpcClientConstructorInjectionBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 
     @Override
-    public void postProcessBeanFactory(@NotNull final ConfigurableListableBeanFactory beanFactory)
+    public void postProcessBeanFactory(final ConfigurableListableBeanFactory beanFactory)
             throws BeansException {
 
         final GrpcClientConstructorInjection grpcClientConstructorInjection = new GrpcClientConstructorInjection();

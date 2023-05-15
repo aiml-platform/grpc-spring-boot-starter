@@ -32,7 +32,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.convert.DataSizeUnit;
 import org.springframework.boot.convert.DurationUnit;
 import org.springframework.core.io.Resource;
-import org.springframework.util.SocketUtils;
 import org.springframework.util.unit.DataSize;
 import org.springframework.util.unit.DataUnit;
 
@@ -426,7 +425,7 @@ public class GrpcServerProperties {
      */
     public int getPort() {
         if (this.port == 0) {
-            this.port = SocketUtils.findAvailableTcpPort();
+            this.port = TestSocketUtils.findAvailableTcpPort();
         }
         return this.port;
     }

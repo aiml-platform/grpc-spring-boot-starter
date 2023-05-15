@@ -66,9 +66,9 @@ dependencies {
     implementation project(':grpc-server-spring-boot-starter') // exclude group: 'io.grpc', module: 'grpc-netty-shaded'
     implementation project(':grpc-client-spring-boot-starter') // exclude group: 'io.grpc', module: 'grpc-netty-shaded'
     if (JavaVersion.current().isJava9Compatible()) {
-        // Workaround for @javax.annotation.Generated
-        // see: https://github.com/grpc/grpc-java/issues/3633
-        implementation 'jakarta.annotation:jakarta.annotation-api'
+            // Workaround for @javax.annotation.Generated
+            // see: https://github.com/grpc/grpc-java/issues/3633
+            implementation 'javax.annotation:javax.annotation-api:1.3.2'
     }
     testImplementation 'io.grpc:grpc-testing'
     testImplementation('org.springframework.boot:spring-boot-starter-test')
